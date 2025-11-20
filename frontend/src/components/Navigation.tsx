@@ -1,12 +1,11 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Home, ArrowLeftRight, User } from 'lucide-react'
+import { ArrowLeftRight, User } from 'lucide-react'
 
 export default function Navigation() {
   const location = useLocation()
 
   const navItems = [
-    { path: '/', label: 'Home', icon: Home },
-    { path: '/exchange', label: 'Exchange', icon: ArrowLeftRight },
+    { path: '/', label: 'Exchange', icon: ArrowLeftRight },
     { path: '/profile', label: 'Profile', icon: User },
   ]
 
@@ -20,11 +19,10 @@ export default function Navigation() {
             <Link
               key={item.path}
               to={item.path}
-              className={`flex flex-col items-center justify-center px-4 py-2 rounded-lg transition-colors ${
-                isActive
+              className={`flex flex-col items-center justify-center px-4 py-2 rounded-lg transition-colors ${isActive
                   ? 'text-purple-500'
                   : 'text-gray-400 hover:text-gray-300'
-              }`}
+                }`}
             >
               <Icon className="w-5 h-5 mb-1" />
               <span className="text-xs font-medium">{item.label}</span>

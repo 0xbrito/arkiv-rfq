@@ -4,7 +4,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { config } from './config/wagmi'
 import Navigation from './components/Navigation'
 import WalletConnect from './components/WalletConnect'
-import Home from './components/Home'
 import Exchange from './components/Exchange'
 import Profile from './components/Profile'
 import './App.css'
@@ -27,7 +26,7 @@ function App() {
 
             {/* Main Content */}
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Exchange />} />
               <Route path="/exchange" element={<Exchange />} />
               <Route path="/profile" element={<Profile />} />
             </Routes>
